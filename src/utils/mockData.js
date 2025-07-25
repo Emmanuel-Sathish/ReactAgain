@@ -1,26 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client"
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div >
-        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh_EzyNmaNJNhuZ7pLm_WG95bHBzLLPXXOTw&s"></img>
-      </div>
-       <div className="nav-items">
-        <ul >
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Cart</li>
-          <li>Profile</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-
-const restaurants = [
+export const restaurants = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     info: {
@@ -674,55 +652,3 @@ const restaurants = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
 ];
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">search</div>
-      <div className="res-container">
-        {restaurants.map((restaurant) => {
-          return (
-            <RestaurantCard
-              key={restaurant.info.id}
-              resData={restaurant.info}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-  const { name, cuisines, avgRating, sla } = props.resData;
-
-  return (
-    <div className="res-card">
-      <img
-        className="res-logo"
-        alt="res-logo"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c43bcda7c717b8a1a8885587dfde8549"
-      ></img>
-      <h3>{name}</h3>
-      <h5>{cuisines.join(", ")}</h5>
-      <h4>{avgRating}⭐</h4>
-      <h4>{sla.deliveryTime}mins</h4>
-    </div>
-  );
-};
-const Footer = ()=>{
-  return(<div>Footer</div>)
-}
-const AppLayout = ()=>{
-  return (
-    <div>
-      <Header/>
-      <Body/>
-      <Footer></Footer>
-    </div>
-  )
-}
-
-let root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<AppLayout></AppLayout>)
-
-

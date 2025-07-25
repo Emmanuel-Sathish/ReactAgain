@@ -53,3 +53,8 @@
      flex-wrap: wrap;
      background-color: sandybrown;
  }
+
+ .filter{
+    padding: 5px;
+    margin: 5px;
+ }
