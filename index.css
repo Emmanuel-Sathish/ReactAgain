@@ -57,4 +57,32 @@
  .filter{
     padding: 5px;
     margin: 5px;
+    display: flex;
+ }
+
+ .shimmer-card{
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0ff;
+    margin: 20px;
+    display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+ .shimmer{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    background-color: sandybrown;
+ }
+
+ .login-btn{
+    margin: 20px;
+    /* padding: 10px; */
+    height: 25px;
+ }
+
+ .search-btn{
+    margin-right: 5px;
  }
